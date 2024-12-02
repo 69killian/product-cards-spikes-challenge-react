@@ -24,7 +24,7 @@ export default function App() {
       title="Raycast Wallpaper #2" 
       description="Recreate this wallpaper using AI."
       buttonText="Start Challenge"
-      premium={false} 
+      premium={true} 
       sword={sword}
       points={points}
     />
@@ -54,7 +54,7 @@ export default function App() {
       title="Raycast Wallpaper #5" 
       description="Recreate this wallpaper using AI."
       buttonText="Start Challenge"
-      premium={false} 
+      premium={true} 
       sword={sword}
       points={points}
     />
