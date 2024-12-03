@@ -22,20 +22,20 @@ const Filters = ({ setSearchQuery, setFilter }) => {
 
   const handleCleanFilters = () => {
     setSelectedFilter('All Challenges');
-    setFilter('All Challenges'); 
+    setFilter('All Challenges');
     setSearchQuery('');
   };
 
   return (
     <div 
-      className={`mt-10 flex flex-row gap-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} 
+      className={`mt-10 flex flex-col lg:flex-row sm:flex-col gap-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} 
       style={{ transition: 'opacity 0.5s ease-out' }}
     >
       {/* Search Input */}
       <input
         type="text"
         placeholder="Search by title"
-        className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-full sm:w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px] focus:outline-none focus:ring-2 focus:ring-blue-500"
         onChange={handleSearchChange}
       />
       
@@ -43,7 +43,7 @@ const Filters = ({ setSearchQuery, setFilter }) => {
       <select
         value={selectedFilter}
         onChange={handleFilterChange}
-        className=" cursor-pointer font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="cursor-pointer font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-full sm:w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px] focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <option value="All Challenges">All Challenges</option>
         <option value="Premium">Premium</option>
@@ -53,7 +53,7 @@ const Filters = ({ setSearchQuery, setFilter }) => {
       {/* Clean Filters Button */}
       <button
         onClick={handleCleanFilters}
-        className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px]"
+        className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-full sm:w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px]"
       >
         Clean Filters
       </button>

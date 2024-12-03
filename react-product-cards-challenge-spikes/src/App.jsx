@@ -7,7 +7,6 @@ import points from './assets/points.png';
 import sword from './assets/swordicon.png';
 import Header from './components/Header.jsx';
 import Filters from './components/Filters.jsx';
-import Tooltip from './components/Tooltip.jsx'
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -83,8 +82,8 @@ export default function App() {
   });
 
   return (
-    <div className="App">
-      <Header />
+    <div className="App flex flex-col items-center min-h-screen">
+      <Header/>
       <Filters 
         setSearchQuery={setSearchQuery}
         setFilter={setFilter}
@@ -94,7 +93,7 @@ export default function App() {
           <p>Sorry :/ <br /> We don't have this challenge</p>
         </div>
       ) : (
-        <div className="grid grid-cols-3 gap-[14.74px] mt-10 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[14.74px] mt-10 mb-20 px-4">
           {filteredCards.map((card, index) => (
             <Cards 
               key={index}
