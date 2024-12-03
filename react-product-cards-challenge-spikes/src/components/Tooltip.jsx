@@ -1,0 +1,27 @@
+import React from 'react'
+import penIcon from '../assets/penicon.png';
+import shareIcon from '../assets/shareicon.png';
+import deleteIcon from '../assets/deleteicon.png';
+
+const Tooltip = () => {
+    return (
+      <section className='border w-[134.39px] h-[90px] bg-white rounded-[9.83px] flex flex-col justify-between py-1 px-1'>
+        <div className='font-inter text-[9.83px] flex flex-row items-center gap-2 w-full h-[23.34px] hover:bg-gray-100 cursor-pointer rounded-[4.94px] p-[4.94px]'>
+          <img src={penIcon} alt="squarepenicon" className='w-3 h-3' />
+          Edit Challenge
+        </div>
+        <div className='font-inter text-[9.83px] flex flex-row items-center gap-2 w-full h-[23.34px] hover:bg-gray-100 cursor-pointer rounded-[4.94px] p-[4.94px]'>
+          <img src={shareIcon} alt="shareicon" className='w-3 h-3' />
+          Share Challenge
+        </div>
+        <div className='font-inter text-[9.83px] text-red-600 flex flex-row items-center gap-2 w-full h-[23.34px] hover:bg-gray-100 cursor-pointer rounded-[4.94px] p-[4.94px]'>
+          <img src={deleteIcon} alt="deleteicon" className='w-3 h-3' />
+          Delete Challenge
+        </div>
+      </section>
+    )
+  }
+  
+
+
+export default Tooltip

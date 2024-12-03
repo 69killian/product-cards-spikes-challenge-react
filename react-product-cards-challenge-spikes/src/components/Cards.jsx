@@ -7,7 +7,7 @@ const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premiu
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, Math.random() * 700); // Décalage aléatoire entre 0 et 700ms pour chaque carte
+    }, Math.random() * 700); 
     return () => clearTimeout(timer);
   }, []);
 

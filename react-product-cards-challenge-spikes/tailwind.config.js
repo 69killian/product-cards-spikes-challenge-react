@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'], // Ajout de la police Inter à la pile sans-serif
+    },
     extend: {
       backgroundImage: {
         'custom-bg': "url('/public/background.png')", // L'URL de ton image

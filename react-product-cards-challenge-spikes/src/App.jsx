@@ -7,6 +7,7 @@ import points from './assets/points.png';
 import sword from './assets/swordicon.png';
 import Header from './components/Header.jsx';
 import Filters from './components/Filters.jsx';
+import Tooltip from './components/Tooltip.jsx'
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -84,6 +85,7 @@ export default function App() {
   return (
     <div className="App">
       <Header />
+      <Tooltip/>
       <Filters 
         setSearchQuery={setSearchQuery}
         setFilter={setFilter}
