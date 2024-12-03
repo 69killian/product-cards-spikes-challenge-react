@@ -12,7 +12,7 @@ const Header = () => {
   }, [text]);
 
   return (
-    <div className="flex items-center justify-center sm:mt-[600px] lg:mt-[150px]">
+    <div className="flex items-center justify-center sm:mt-[600px] lg:mt-[350px]">
       <header className="text-black font-inter text-4xl font-semibold flex ">
         {letters.map((letter, index) => (
           <span
