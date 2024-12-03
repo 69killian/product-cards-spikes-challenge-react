@@ -1,4 +1,5 @@
 import Cards from "./components/Cards.jsx";
+import Footer from "./components/Footer.jsx";
 import cardImage1 from './assets/cardimage1.png';
 import cardImage2 from './assets/cardimage2.png';
 import points from './assets/points.png';
@@ -7,7 +8,7 @@ import sword from './assets/swordicon.png';
 export default function App() {
   return (
     <div className="App">
-      <div className="grid grid-cols-3 gap-[14.74px] mt-10">
+      <div className="grid grid-cols-3 gap-[14.74px] mt-10 mb-20">
     <Cards 
       cardImage={cardImage1} 
       cardImageAlt="Raycast Wallpaper #1" 
@@ -69,6 +70,7 @@ export default function App() {
       points={points}
     />
     </div>
+    <Footer/>
   </div>
   );
 }
