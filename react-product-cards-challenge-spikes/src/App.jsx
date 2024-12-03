@@ -85,7 +85,6 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <Tooltip/>
       <Filters 
         setSearchQuery={setSearchQuery}
         setFilter={setFilter}

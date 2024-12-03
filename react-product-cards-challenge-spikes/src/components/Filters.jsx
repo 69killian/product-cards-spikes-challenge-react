@@ -22,7 +22,7 @@ const Filters = ({ setSearchQuery, setFilter }) => {
 
   const handleCleanFilters = () => {
     setSelectedFilter('All Challenges');
-    setFilter('All Challenges'); // Réinitialise les filtres dans App
+    setFilter('All Challenges'); 
     setSearchQuery('');
   };
 
