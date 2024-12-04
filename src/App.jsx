@@ -83,7 +83,7 @@ export default function App() {
   });
 
   return (
-    <div className="App flex flex-col items-center min-h-screen">
+    <div className="App flex flex-col items-center min-h-screen ">
       <Header/>
       <Filters 
         setSearchQuery={setSearchQuery}
@@ -94,7 +94,7 @@ export default function App() {
           <p>Sorry :/ <br /> We don't have this challenge</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[14.74px] mt-10 mb-20 px-4">
+        <div className=" sm:grid md:grid lg:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-[14.74px] mt-10 mb-20 px-4">
           {filteredCards.map((card, index) => (
             <Cards 
               key={index}
