@@ -85,7 +85,6 @@ export default function App() {
   return (
     <div className="App flex flex-col items-center min-h-screen">
       <Header/>
-      <Modal></Modal>
       <Filters 
         setSearchQuery={setSearchQuery}
         setFilter={setFilter}
@@ -112,6 +111,7 @@ export default function App() {
           ))}
         </div>
       )}
+      <Modal></Modal>
       <Footer />
     </div>
   );
