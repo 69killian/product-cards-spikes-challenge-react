@@ -2,25 +2,31 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Tooltip from './Tooltip';
 
-const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premium, points, sword, free }) => {
+const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, buttonText, premium, points, sword, free }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+  const [localTitle, setLocalTitle] = useState(title); // Initialise avec `title` par défaut
 
   useEffect(() => {
+    // met à jour `localTitle` avec `initialTitle` si `localTitle` est vide
+    if (localTitle === "") {
+      setLocalTitle(initialTitle);
+    }
+
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, Math.random() * 700); 
     return () => clearTimeout(timer);
-  }, []);
+  }, [initialTitle, localTitle]);
 
   const handleTooltipToggle = () => {
-    setIsTooltipVisible(prevState => !prevState);  // Alterne la visibilité du tooltip
+    setIsTooltipVisible(prevState => !prevState);
   };
 
   const handleClickOutside = (event) => {
     if (event.target.closest('.tooltip-container') === null) {
-      setIsTooltipVisible(false); // Ferme le tooltip quand un clic se produit à l'extérieur
+      setIsTooltipVisible(false);
     }
   };
 
@@ -28,6 +34,13 @@ const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premiu
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Fonction pour mettre à jour le titre
+  const updateTitle = (newTitle) => {
+    if (newTitle.trim() !== '') {
+      setLocalTitle(newTitle); 
+    }
+  };
 
   return (
     <>
@@ -46,7 +59,9 @@ const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premiu
           />
 
           <div className="flex flex-cols-2 justify-between items-center">
-            <p className="font-inter font-medium text-[17.2px] my-[11.98px]">{title}</p>
+            <p className="font-inter font-medium text-[17.2px] my-[11.98px]">
+              {localTitle || title}  {/* Affiche `localTitle` après modification, sinon affiche `title` */}
+            </p>
             {premium && (
               <p className="text-[9.83px] font-inter font-medium bg-[#CFD2DD66] p-[4.91px] rounded-[4.91px]">Premium</p>
             )}
@@ -74,13 +89,13 @@ const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premiu
 
         {isTooltipVisible && (
           <motion.div 
-            className="absolute top-[0px] left-[0px] z-50 tooltip-container"  // Ajout d'une classe pour le ciblage du clic extérieur
+            className="absolute top-[0px] left-[0px] z-50 tooltip-container" 
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 10 }}
             transition={{ duration: 0.3 }}
           >
-            <Tooltip closeTooltip={() => setIsTooltipVisible(false)} />
+            <Tooltip closeTooltip={() => setIsTooltipVisible(false)} updateTitle={updateTitle} />
           </motion.div>
         )}
       </div>
