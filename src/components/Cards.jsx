@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';  // Importer framer-motion
-import Tooltip from './Tooltip';  // Assurez-vous d'importer votre Tooltip
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Tooltip from './Tooltip';
 
 const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premium, points, sword, free }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,9 +18,20 @@ const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premiu
     setIsTooltipVisible(prevState => !prevState);  // Alterne la visibilité du tooltip
   };
 
+  const handleClickOutside = (event) => {
+    if (event.target.closest('.tooltip-container') === null) {
+      setIsTooltipVisible(false); // Ferme le tooltip quand un clic se produit à l'extérieur
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
     <>
-      <div className="relative"> {/* Assure que le parent est bien positionné pour les éléments à l'intérieur */}
+      <div className="relative">
         <div 
           className={`bg-white w-[337px] h-[389px] p-[14.74px] rounded-[19.65px] border border-solid border-[#E4E4EB] flex flex-col justify-between 
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} 
@@ -61,15 +72,15 @@ const Cards = ({ cardImage, cardImageAlt, title, description, buttonText, premiu
           </div>
         </div>
 
-
         {isTooltipVisible && (
-          <motion.div className='absolute top-[0px] left-[0px] z-50'
+          <motion.div 
+            className="absolute top-[0px] left-[0px] z-50 tooltip-container"  // Ajout d'une classe pour le ciblage du clic extérieur
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 10 }}
             transition={{ duration: 0.3 }}
           >
-            <Tooltip />
+            <Tooltip closeTooltip={() => setIsTooltipVisible(false)} />
           </motion.div>
         )}
       </div>
