@@ -4,7 +4,7 @@ import shareIcon from '../assets/shareicon.png';
 import deleteIcon from '../assets/deleteicon.png';
 import Modal from './Modal';
 
-const Tooltip = ({ closeTooltip }) => {
+const Tooltip = ({ closeTooltip, updateTitle }) => {
   const [isModalOpen, setModalOpen] = React.useState(false);
 
   const openModal = () => setModalOpen(true);
@@ -17,7 +17,7 @@ const Tooltip = ({ closeTooltip }) => {
       >
         <div
           className="font-inter text-[9.83px] flex flex-row items-center gap-2 w-full h-[23.34px] hover:bg-gray-100 cursor-pointer rounded-[4.94px] p-[4.94px] transition-colors duration-200"
-          onClick={openModal} // Ouvre le modal
+          onClick={openModal}
         >
           <img src={penIcon} alt="squarepenicon" className="w-3 h-3" />
           Edit Challenge
@@ -32,8 +32,7 @@ const Tooltip = ({ closeTooltip }) => {
         </div>
       </section>
 
-      {/* Modal */}
-      <Modal isOpen={isModalOpen} closeModal={closeModal} />
+      <Modal isOpen={isModalOpen} closeModal={closeModal} updateTitle={updateTitle} />
     </>
   );
 };

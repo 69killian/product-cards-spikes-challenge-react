@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-const Modal = ({ isOpen, closeModal }) => {
+const Modal = ({ isOpen, closeModal, updateTitle }) => {
   const [isAnimating, setIsAnimating] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
 
   React.useEffect(() => {
     if (isOpen) setIsAnimating(true);
@@ -14,7 +15,7 @@ const Modal = ({ isOpen, closeModal }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Form submitted');
+    updateTitle(newTitle);  // Met à jour le titre de la carte
     handleClose();
   };
 
@@ -50,6 +51,8 @@ const Modal = ({ isOpen, closeModal }) => {
               id="card-title"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               placeholder="Enter card title"
+              value={newTitle}
+              onChange={(e) => setNewTitle(e.target.value)}  // Met à jour l'état de titre
               required
             />
           </div>
