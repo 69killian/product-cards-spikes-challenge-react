@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# (FR) Product Cards Challenge 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image du projet](screen-cards.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+[![Lien du site déployé]()](https://product-cards-spikes-challenge-react.vercel.app/)
 
-### `npm start`
+Bienvenue dans le **Product Cards Challenge** ! Réalisé dans le cadre de la communauté Spikes Challenge, ce projet a été l'occasion de me familiariser avec **React** et **Tailwind CSS**, tout en renforçant mes compétences pratiques avec des concepts de bases interactives et dynamiques.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🎯 **Objectifs**
 
-### `npm test`
+- Apprendre et pratiquer l'utilisation de **React** pour la création de composants dynamiques.
+- Explorer les possibilités de **Tailwind CSS** pour un design rapide et efficace.
+- Implémenter des fonctionnalités interactives pour enrichir l'expérience utilisateur.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ✨ **Fonctionnalités**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Filtrage des produits** : 
+  - **Par nom** : Barre de recherche qui filtre les produits en dynamique sans rechargement de page
+  - **Par type** : Filtre des produits en fonction de leur statut premium ou free
+- **Animations** : Animations fluides pour l'apparition et la mise à jour des produits
+- **Modification des noms** : 
+  - Chaque carte contient un bouton permettant de **modifier le nom du produit** en temps réel
+- **Réinitialisation des filtres** :
+  - Un bouton permet de **supprimer tous les filtres** appliqués pour afficher à nouveau la liste complète des produits
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ **Technos Utilisées**
 
-### `npm run eject`
+- **React.js** : Pour la gestion de l'état et la création des composants UI
+- **Tailwind CSS** : Pour un stylisme rapide et réactif des cartes
+- **Vercel** : Pour la configuration rapide de déploiement et gratuite
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
+<br><br><br><br><br><br><br><br><br><br>
+# (ENG) Product Cards Challenge 🚀
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![Link to the Deployed Web Site]()](https://product-cards-spikes-challenge-react.vercel.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Welcome to the **Product Cards Challenge** ! Created as part of the Spikes Challenge community, this project was an opportunity to get familiar with **React** and **Tailwind CSS**, while reinforcing my practical skills in interactive and dynamic design concepts.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎯 **Goals**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Learn and practice using **React** for building dynamic components.
+- Explore the capabilities of **Tailwind CSS** for fast and efficient design.
+- Implement interactive features to enhance the user experience.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ✨ **Features**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Product Filtering**:
+  - **By Name**: A search bar dynamically filters products without page reloads.
+  - **By Type**: Filter products based on their status (premium or free).
+- **Animations**: Smooth animations for product appearance and updates.
+- **Name Editing**:
+  - Each card includes a button to **edit the product name** in real time.
+- **Reset Filters**:
+  - A reset button allows users to **clear all filters** and display the full product list again.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⚙️ **Technologies Used**
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React.js**: For state management and UI component creation.
+- **Tailwind CSS**: For fast and responsive card styling.
+- **Vercel**: For quick and free deployment configuration.
