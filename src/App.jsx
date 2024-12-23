@@ -90,7 +90,7 @@ export default function App() {
         cx={8}
         cy={8}
         cr={4}
-        className="absolute top-0 left-0 w-full h-screen z-0 " 
+        className="absolute top-0 left-0 w-full h-screen z-0 overflow-hidden" 
       />
       <div 
     className="absolute text-center overflow-hidden bg-white w-[500px] h-[500px] rounded-full"
@@ -101,7 +101,7 @@ export default function App() {
     }}
 ></div>
       
-    <div className="App items-center justify-center relative overflow-hidden">
+    <div className="App items-center justify-center relative">
       
       
       <div className="relative z-10 w-full">
