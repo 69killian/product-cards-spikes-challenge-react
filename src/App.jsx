@@ -84,26 +84,29 @@ export default function App() {
 
   return (
     <>
-    <DotPattern
-        width={20}
-        height={20}
-        cx={8}
-        cy={8}
-        cr={4}
-        className="absolute top-0 left-0 w-full h-screen z-0" 
-      />
-      <div 
+   <DotPattern
+  width={20}
+  height={20}
+  cx={8}
+  cy={8}
+  cr={4}
+  className="absolute top-0 left-0 w-full h-full z-0" 
+/>
+
+   <div
     className="absolute text-center bg-white w-[500px] h-[500px] rounded-full"
     style={{
         zIndex: 0,
-        filter: "blur(50px)",
+        filter: "blur(100px)",
+        top: "25%",
+        left: "35%",
     }}
 ></div>
       
-    <div className="App flex justify-center items-center">
+    <div className="App flex justify-center items-center ">
       
       
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden pb-[1050px]">
         <Header />
         <Filters 
           setSearchQuery={setSearchQuery}
@@ -114,7 +117,7 @@ export default function App() {
             <p>Sorry :/ <br /> We don't have this challenge</p>
           </div>
         ) : (
-          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-[14.74px] mt-10 px-4">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-[14.74px] mt-10 px-4">
             {filteredCards.map((card, index) => (
               <Cards 
                 key={index}
