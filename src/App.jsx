@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Cards from './components/Cards.jsx';
 import Footer from './components/Footer.jsx';
-import cardImage1 from './assets/cardimage1.png';
-import cardImage2 from './assets/cardimage2.png';
-import points from './assets/points.png';
+import cardImage from './assets/Frame 2.svg';
+import points from './assets/points.svg';
 import sword from './assets/swordicon.png';
 import Header from './components/Header.jsx';
 import Filters from './components/Filters.jsx';
@@ -16,7 +15,7 @@ export default function App() {
   // Liste des cartes
   const cardData = [
     {
-      cardImage: cardImage1,
+      cardImage: cardImage,
       cardImageAlt: "Raycast Wallpaper #1",
       title: "Raycast Wallpaper #1",
       description: "Recreate this wallpaper using AI.",
@@ -25,7 +24,7 @@ export default function App() {
       free: false,
     },
     {
-      cardImage: cardImage2,
+      cardImage: cardImage,
       cardImageAlt: "Raycast Wallpaper #2",
       title: "Raycast Wallpaper #2",
       description: "Recreate this wallpaper using AI.",
@@ -34,7 +33,7 @@ export default function App() {
       free: true,
     },
     {
-      cardImage: cardImage1,
+      cardImage: cardImage,
       cardImageAlt: "Raycast Wallpaper #3",
       title: "Raycast Wallpaper #3",
       description: "Recreate this wallpaper using AI.",
@@ -43,7 +42,7 @@ export default function App() {
       free: false,
     },
     {
-      cardImage: cardImage1,
+      cardImage: cardImage,
       cardImageAlt: "Raycast Wallpaper #4",
       title: "Raycast Wallpaper #4",
       description: "Recreate this wallpaper using AI.",
@@ -52,7 +51,7 @@ export default function App() {
       free: false,
     },
     {
-      cardImage: cardImage2,
+      cardImage: cardImage,
       cardImageAlt: "Raycast Wallpaper #5",
       title: "Raycast Wallpaper #5",
       description: "Recreate this wallpaper using AI.",
@@ -61,7 +60,7 @@ export default function App() {
       free: true,
     },
     {
-      cardImage: cardImage1,
+      cardImage: cardImage,
       cardImageAlt: "Raycast Wallpaper #6",
       title: "Raycast Wallpaper #6",
       description: "Recreate this wallpaper using AI.",

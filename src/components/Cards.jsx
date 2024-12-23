@@ -4,7 +4,6 @@ import Tooltip from './Tooltip';
 
 const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, buttonText, premium, points, sword, free }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [localTitle, setLocalTitle] = useState(title); // Initialise avec `title` par défaut
 
@@ -16,7 +15,7 @@ const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, butt
 
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, Math.random() * 700); 
+    }, 100); 
     return () => clearTimeout(timer);
   }, [initialTitle, localTitle]);
 
@@ -49,9 +48,7 @@ const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, butt
           className={`bg-white w-[337px] h-[389px] p-[14.74px] rounded-[19.65px] border border-solid border-[#E4E4EB] flex flex-col justify-between 
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} 
           transition-all duration-200 ease-in-out
-          ${isHovered ? 'shadow-[2px_2px_0px_rgba(0,0,0,0.2)]' : ''}`}
-          onMouseEnter={() => setIsHovered(true)} 
-          onMouseLeave={() => setIsHovered(false)}
+        `}
         >
           <img 
             src={cardImage} 
