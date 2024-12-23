@@ -90,24 +90,21 @@ export default function App() {
         cx={8}
         cy={8}
         cr={4}
-        className="absolute top-0 left-0 w-full h-screen z-0 overflow-hidden" 
+        className="absolute top-0 left-0 w-full h-screen z-0" 
       />
       <div 
-    className="absolute text-center overflow-hidden bg-white w-[500px] h-[500px] rounded-full"
+    className="absolute text-center bg-white w-[500px] h-[500px] rounded-full"
     style={{
         zIndex: 0,
         filter: "blur(50px)",
-        overflow: "hidden",
     }}
 ></div>
       
-    <div className="App items-center justify-center relative">
+    <div className="App items-center justify-center relative mt-[1350px] sm:mt-[150px] md:mt-[150px] lg:mt-[0px] xl:mt-[0px]">
       
       
-      <div className="relative z-10 w-full">
-        <div className='mt-[1350px] sm:mt-[150px] md:mt-[150px] lg:mt-[0px] xl:mt-[0px]'>
+      <div className="relative z-10 w-full ">
         <Header />
-        </div>
         <Filters 
           setSearchQuery={setSearchQuery}
           setFilter={setFilter}
