@@ -45,13 +45,12 @@ const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, butt
   return (
     <>
       <div className="relative flex justify-center items-center">
+        
         <div 
           className={`bg-white w-[337px] h-[389px] p-[14.74px] rounded-[19.65px] border border-solid border-[#E4E4EB] flex flex-col justify-between 
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} 
           transition-all duration-200 ease-in-out
-          ${isHovered ? 'shadow-[2px_2px_0px_rgba(0,0,0,0.2)]' : ''}`}
-          onMouseEnter={() => setIsHovered(true)} 
-          onMouseLeave={() => setIsHovered(false)}
+         `}
         >
           <img 
             src={cardImage} 
@@ -88,13 +87,13 @@ const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, butt
         </div>
 
         {isTooltipVisible && (
-          <motion.div 
-            className="absolute top-[0px] left-[0px] z-50 tooltip-container" 
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 10 }}
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div
+          className="absolute top-[0px] left-[0px] z-50 tooltip-container"
+          initial={{ opacity: 0, y: -10 }}  // Commence 10px plus bas
+          animate={{ opacity: 1, y: 0 }}   // Monte à sa position d'origine
+          exit={{ opacity: 0, y: 10 }}     // Lorsqu'il disparaît, il descend de 10px
+          transition={{ duration: 0.3 }}
+        >
             <Tooltip closeTooltip={() => setIsTooltipVisible(false)} updateTitle={updateTitle} />
           </motion.div>
         )}
