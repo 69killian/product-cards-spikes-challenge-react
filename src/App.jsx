@@ -100,10 +100,10 @@ export default function App() {
     }}
 ></div>
       
-    <div className="App items-center justify-center relative mt-[1350px] sm:mt-[150px] md:mt-[150px] lg:mt-[0px] xl:mt-[0px]">
+    <div className="App flex justify-center items-center">
       
       
-      <div className="relative z-10 w-full ">
+      <div className="relative overflow-hidden">
         <Header />
         <Filters 
           setSearchQuery={setSearchQuery}
@@ -114,7 +114,7 @@ export default function App() {
             <p>Sorry :/ <br /> We don't have this challenge</p>
           </div>
         ) : (
-          <div className=" grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-[14.74px] mt-10 px-4">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-[14.74px] mt-10 px-4">
             {filteredCards.map((card, index) => (
               <Cards 
                 key={index}
