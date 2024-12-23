@@ -8,9 +8,6 @@ module.exports = {
       sans: ['Inter', 'sans-serif'],
     },
     extend: {
-      backgroundImage: {
-        'custom-bg': "url('/public/background.png')",
-      },
       screens: {
         xs: '400px',  // Point de rupture à 639px
       },
