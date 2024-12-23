@@ -28,7 +28,7 @@ const Filters = ({ setSearchQuery, setFilter }) => {
 
   return (
     <div 
-      className={`mt-10 flex flex-col lg:flex-row sm:flex-col gap-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} 
+      className={`mt-10 flex justify-center items-center px-10  gap-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} 
       style={{ transition: 'opacity 0.5s ease-out' }}
     >
       {/* Search Input */}

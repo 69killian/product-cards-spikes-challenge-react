@@ -87,27 +87,27 @@ export default function App() {
     <DotPattern
         width={20}
         height={20}
-        cx={1}
-        cy={1}
-        cr={1}
-        className="absolute top-0 left-0 w-full h-screen z-0" 
+        cx={8}
+        cy={8}
+        cr={4}
+        className="absolute top-0 left-0 w-full h-screen z-0 " 
       />
       <div 
-    className="absolute overflow-hidden top-[-0px] bg-white w-[300px] h-[300px] rounded-full"
+    className="absolute text-center overflow-hidden bg-white w-[500px] h-[500px] rounded-full"
     style={{
         zIndex: 0,
-        filter: "blur(20px)",
+        filter: "blur(50px)",
         overflow: "hidden",
-        top: "50%", // Placer au centre verticalement
-        left: "50%", // Placer au centre horizontalement
     }}
 ></div>
       
-    <div className="App flex flex-col items-center relative">
+    <div className="App items-center justify-center relative overflow-hidden">
       
       
       <div className="relative z-10 w-full">
+        <div className='mt-[1350px] sm:mt-[150px] md:mt-[150px] lg:mt-[0px] xl:mt-[0px]'>
         <Header />
+        </div>
         <Filters 
           setSearchQuery={setSearchQuery}
           setFilter={setFilter}
@@ -117,7 +117,7 @@ export default function App() {
             <p>Sorry :/ <br /> We don't have this challenge</p>
           </div>
         ) : (
-          <div className="sm:grid md:grid lg:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-[14.74px] mt-10 mb-20 px-4">
+          <div className=" grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-[14.74px] mt-10 px-4">
             {filteredCards.map((card, index) => (
               <Cards 
                 key={index}

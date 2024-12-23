@@ -43,14 +43,14 @@ const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, butt
 
   return (
     <>
-      <div className="relative">
+      <div className=" flex justify-center items-center ">
         <div 
-          className={`bg-white w-[337px] h-[389px] p-[14.74px] rounded-[19.65px] border border-solid border-[#E4E4EB] flex flex-col justify-between 
+          className={` bg-white w-[337px] h-[389px] p-[14.74px] rounded-[19.65px] border border-solid border-[#E4E4EB] flex flex-col  
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} 
           transition-all duration-200 ease-in-out
         `}
         >
-          <img 
+          <img
             src={cardImage} 
             alt={cardImageAlt} 
           />
