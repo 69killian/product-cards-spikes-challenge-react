@@ -5,7 +5,7 @@
 
 [![Lien du site déployé]()](https://product-cards-spikes-challenge-react.vercel.app/)
 
-Bienvenue dans le **Product Cards Challenge** ! Réalisé dans le cadre de la communauté Spikes Challenge, ce projet a été l'occasion de me familiariser avec **React** et **Tailwind CSS**, tout en renforçant mes compétences pratiques avec des concepts de bases interactives et dynamiques.
+Bienvenue dans le **Product Cards** ! Réalisé dans le cadre de la communauté Spikes Challenge, ce projet a été l'occasion de me familiariser avec **React** et **Tailwind CSS**, tout en renforçant mes compétences pratiques avec des concepts de bases interactives et dynamiques.
 
 ---
 
