@@ -4,12 +4,8 @@ import shareIcon from '../assets/partager.svg';
 import deleteIcon from '../assets/signaler.svg';
 import Modal from './Modal';
 
-const Tooltip = ({ closeTooltip, updateTitle, id, currentTitle }) => {
-  const [isModalOpen, setModalOpen] = React.useState(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
-
+// Composant Tooltip
+const Tooltip = ({ closeTooltip, updateTitle, cardId, currentTitle, openModal }) => {
   return (
     <>
       <section
@@ -17,7 +13,7 @@ const Tooltip = ({ closeTooltip, updateTitle, id, currentTitle }) => {
       >
         <div
           className="font-inter text-[9.83px] flex flex-row items-center gap-2 w-full h-[23.34px] hover:bg-gray-100 cursor-pointer rounded-[4.94px] p-[4.94px] transition-colors duration-200"
-          onClick={openModal}
+          onClick={openModal} // Ouvre le modal en passant les bons paramètres
         >
           <img src={penIcon} alt="squarepenicon" className="w-[13.33px] h-[12.71px]" />
           Enregistrer
@@ -31,16 +27,9 @@ const Tooltip = ({ closeTooltip, updateTitle, id, currentTitle }) => {
           Signaler
         </div>
       </section>
-
-      <Modal
-        id={id}
-        isOpen={isModalOpen}
-        closeModal={closeModal}
-        updateTitle={(newTitle) => updateTitle(id, newTitle)}
-        currentTitle={currentTitle}
-      />
     </>
   );
 };
 
 export default Tooltip;
+

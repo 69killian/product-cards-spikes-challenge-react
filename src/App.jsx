@@ -34,7 +34,8 @@ export default function App() {
   // Appliquer les filtres et la recherche
   useEffect(() => {
     const filtered = cardData.filter(card => {
-      const matchesSearch = card.title.toLowerCase().includes(searchQuery.toLowerCase());
+      if (!card.title) return false; // Assurez-vous qu'il y a un titre pour la carte
+      const matchesSearch = card.title.toLowerCase().includes(searchQuery.toLowerCase()); // Comparaison avec searchQuery
       const matchesFilter =
         filter === 'All Challenges' ||
         (filter === 'Premium' && card.premium) ||
@@ -43,7 +44,7 @@ export default function App() {
     });
     setFilteredCardData(filtered); // Mettre à jour les cartes filtrées
   }, [searchQuery, filter, cardData]); // Trigger quand `searchQuery`, `filter` ou `cardData` changent
-
+  
   // Fonction pour mettre à jour le titre et sauvegarder dans localStorage
   const updateTitle = (id, newTitle) => {
     const updatedCardData = cardData.map((card) =>
