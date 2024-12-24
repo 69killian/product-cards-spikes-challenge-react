@@ -4,7 +4,7 @@ import shareIcon from '../assets/partager.svg';
 import deleteIcon from '../assets/signaler.svg';
 import Modal from './Modal';
 
-const Tooltip = ({ closeTooltip, updateTitle }) => {
+const Tooltip = ({ closeTooltip, updateTitle, id, currentTitle }) => {
   const [isModalOpen, setModalOpen] = React.useState(false);
 
   const openModal = () => setModalOpen(true);
@@ -32,7 +32,13 @@ const Tooltip = ({ closeTooltip, updateTitle }) => {
         </div>
       </section>
 
-      <Modal isOpen={isModalOpen} closeModal={closeModal} updateTitle={updateTitle} />
+      <Modal
+        id={id}
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        updateTitle={(newTitle) => updateTitle(id, newTitle)}
+        currentTitle={currentTitle}
+      />
     </>
   );
 };

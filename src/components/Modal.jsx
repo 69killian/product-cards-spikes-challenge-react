@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Modal = ({ isOpen, closeModal, updateTitle }) => {
+const Modal = ({ isOpen, closeModal, updateTitle, currentTitle, id }) => {
   const [isAnimating, setIsAnimating] = useState(false);
-  const [newTitle, setNewTitle] = useState('');
+  const [newTitle, setNewTitle] = useState(currentTitle);
 
-  React.useEffect(() => {
-    if (isOpen) setIsAnimating(true);
-  }, [isOpen]);
+  useEffect(() => {
+    if (isOpen) {
+      setNewTitle(currentTitle); // Charge le titre actuel à l'ouverture
+      setIsAnimating(true);
+    }
+  }, [isOpen, currentTitle]);
 
   const handleClose = () => {
     setIsAnimating(false);
     setTimeout(() => closeModal(), 300);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    updateTitle(newTitle);  // Met à jour le titre de la carte
+  const handleSubmit = () => {
+    updateTitle(id, newTitle);
     handleClose();
   };
 
@@ -34,9 +36,7 @@ const Modal = ({ isOpen, closeModal, updateTitle }) => {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <h3 className="text-2xl font-semibold text-gray-900 text-center">
-          Edit Card
-        </h3>
+        <h3 className="text-2xl font-semibold text-gray-900 text-center">Edit Card</h3>
         <form className="space-y-4 mt-4" onSubmit={handleSubmit}>
           <div>
             <label
@@ -52,7 +52,7 @@ const Modal = ({ isOpen, closeModal, updateTitle }) => {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               placeholder="Enter card title"
               value={newTitle}
-              onChange={(e) => setNewTitle(e.target.value)}  // Met à jour l'état de titre
+              onChange={(e) => setNewTitle(e.target.value)}
               required
             />
           </div>
