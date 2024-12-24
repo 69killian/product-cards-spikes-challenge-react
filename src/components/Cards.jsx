@@ -4,6 +4,7 @@ import Tooltip from './Tooltip';
 import points from '../assets/points.svg';
 import sword from '../assets/swordicon.png';
 
+// Composant Cards
 const Cards = ({ cardId, cardImage, cardImageAlt, title, description, buttonText, premium, free, updateTitle, openModal }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
@@ -70,7 +71,7 @@ const Cards = ({ cardId, cardImage, cardImageAlt, title, description, buttonText
 
             <button
               className="flex items-center justify-center border border-solid rounded-[9.83px] w-[36px] h-[36px] relative bg-white ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] focus:outline focus:outline-2 focus:outline-offset-2"
-              onClick={() => openModal(cardId, localTitle)}  // Ouvre le modal
+              onClick={() => setIsTooltipVisible(true)}  // Ouvre le tooltip
             >
               <img src={points} alt="points" />
             </button>
@@ -87,9 +88,10 @@ const Cards = ({ cardId, cardImage, cardImageAlt, title, description, buttonText
           >
             <Tooltip
               closeTooltip={() => setIsTooltipVisible(false)}
-              updateTitle={(newTitle) => updateTitle(cardId, newTitle)}
+              updateTitle={updateCardTitle}
               cardId={cardId}
               currentTitle={localTitle}
+              openModal={() => openModal(cardId, localTitle)}  // Ouvre le modal
             />
           </motion.div>
         )}
@@ -97,5 +99,6 @@ const Cards = ({ cardId, cardImage, cardImageAlt, title, description, buttonText
     </>
   );
 };
+
 
 export default Cards;
