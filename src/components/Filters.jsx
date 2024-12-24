@@ -35,7 +35,7 @@ const Filters = ({ setSearchQuery, setFilter }) => {
       <input
         type="text"
         placeholder="Search by title"
-        className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-full sm:w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-full sm:w-[337px] h-[35px] relative bg-white  p-[9px] focus:outline focus:outline-2 focus:outline-offset-2"
         onChange={handleSearchChange}
       />
       
@@ -43,7 +43,7 @@ const Filters = ({ setSearchQuery, setFilter }) => {
       <select
         value={selectedFilter}
         onChange={handleFilterChange}
-        className="cursor-pointer font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-full sm:w-[337px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] p-[9px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="cursor-pointer font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-full sm:w-[337px] h-[35px] relative bg-white p-[9px] focus:outline focus:outline-2 focus:outline-offset-2"
       >
         <option value="All Challenges">All Challenges</option>
         <option value="Premium">Premium</option>

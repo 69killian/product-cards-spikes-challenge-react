@@ -1,0 +1,63 @@
+{ "cardData" : [
+    {
+        "id": 1,
+      "cardImage": "./Frame2.svg",
+      "cardImageAlt": "Raycast Wallpaper #1",
+      "title": "Raycast Wallpaper #1",
+      "description": "Recreate this wallpaper using AI.",
+      "buttonText": "Start Challenge",
+      "premium": true,
+      "free": false
+    },
+    {
+        "id": 2,
+      "cardImage": "./Frame2.svg",
+      "cardImageAlt": "Raycast Wallpaper #2",
+      "title": "Raycast Wallpaper #2",
+      "description": "Recreate this wallpaper using AI.",
+      "buttonText": "Start Challenge",
+      "premium": false,
+      "free": true
+    },
+    {
+        "id": 3,
+      "cardImage": "./Frame2.svg",
+      "cardImageAlt": "Raycast Wallpaper #3",
+      "title": "Raycast Wallpaper #3",
+      "description": "Recreate this wallpaper using AI.",
+      "buttonText": "Start Challenge",
+      "premium": true,
+      "free": false
+    },
+    {
+        "id": 4,
+      "cardImage": "./Frame2.svg",
+      "cardImageAlt": "Raycast Wallpaper #4",
+     "title": "Raycast Wallpaper #4",
+      "description": "Recreate this wallpaper using AI.",
+      "buttonText": "Start Challenge",
+      "premium": true,
+      "free": false
+    },
+    {
+        "id": 5,
+      "cardImage": "./Frame2.svg",
+      "cardImageAlt": "Raycast Wallpaper #5",
+      "title": "Raycast Wallpaper #5",
+      "description": "Recreate this wallpaper using AI.",
+      "buttonText": "Start Challenge",
+      "premium": false,
+      "free": true
+    },
+    {
+        "id": 6,
+      "cardImage": "./Frame2.svg",
+      "cardImageAlt": "Raycast Wallpaper #6",
+      "title": "Raycast Wallpaper #6",
+      "description": "Recreate this wallpaper using AI.",
+      "buttonText": "Start Challenge",
+      "premium": false,
+      "free": true
+    }
+  ]
+}
