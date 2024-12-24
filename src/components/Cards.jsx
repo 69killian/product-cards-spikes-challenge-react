@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Tooltip from './Tooltip';
+import points from '../assets/points.svg';
+import sword from '../assets/swordicon.png';
 
-const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, buttonText, premium, points, sword, free }) => {
+const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, buttonText, premium, free }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [localTitle, setLocalTitle] = useState(title); // Initialise avec `title` par défaut
 
@@ -16,7 +17,7 @@ const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, butt
 
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, Math.random() * 700); 
+    }, 100); 
     return () => clearTimeout(timer);
   }, [initialTitle, localTitle]);
 
@@ -72,13 +73,13 @@ const Cards = ({ cardImage, cardImageAlt, title, initialTitle, description, butt
           <p className="text-[12.28px] font-normal text-[#090C1580]">{description}</p>
           
           <div className="flex flex-cols-2 justify-between items-center mt-auto relative">
-            <button className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-[156px] h-[35px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)]">
+            <button className="font-inter font-medium text-[14.78px] flex items-center justify-center gap-2 border border-solid rounded-[9.83px] w-[156px] h-[35px] relative bg-white">
               <img src={sword} alt="sword" className="w-[16px] h-[16px]" />
               {buttonText}
             </button>
 
             <button 
-              className="flex items-center justify-center border border-solid rounded-[9.83px] w-[36px] h-[36px] relative bg-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)]"
+              className="flex items-center justify-center border border-solid rounded-[9.83px] w-[36px] h-[36px] relative bg-white  ease-in-out hover:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] focus:outline focus:outline-2 focus:outline-offset-2"
               onClick={handleTooltipToggle}
             >
               <img src={points} alt="points" />
